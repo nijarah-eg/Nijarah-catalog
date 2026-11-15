@@ -126,11 +126,11 @@ function tn(k,l){return TYPES[k][l==="ar"?0:1]}
 function load(src,cb,err){var s=document.createElement("script");s.src=src;s.onload=cb;s.onerror=err;document.head.appendChild(s)}
 function ensureThumbs(id,cb){
   if(NJ.t[id])return cb(true);
-  load("data/t_"+id+".js",function(){cb(true)},function(){cb(false)});
+  load("t_"+id+".js",function(){cb(true)},function(){cb(false)});
 }
 function ensureFull(p,cb){
   if(NJ.f[p.ch])return cb(true);
-  load("data/f_"+p.ch+".js",function(){cb(true)},function(){cb(false)});
+  load("f_"+p.ch+".js",function(){cb(true)},function(){cb(false)});
 }
 function render(){
   var t=T[lang],li=lang==="ar"?0:1;
